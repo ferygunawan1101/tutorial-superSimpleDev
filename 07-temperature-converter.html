@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+</head>
+<body>
+  <h1>Temperature Converter</h1>
+  <h3>Javascript Exercises 03/13/2025</h3>
+
+  <button onclick="
+      celciusToFahrenheit(prompt('Input Celsius Temperature:'));
+    ">
+    Celsius to Fahrenheit
+  </button>
+
+
+  <button onclick="
+      fahrenheitToCelsius(prompt('Input Fahrenheit Temperature:'));
+    ">
+    Fahrenheit to Celsius
+  </button>
+
+  <button onclick="
+      convertTemperature(prompt('Input Temperature:'), prompt('Unit in Celsius or Fahrenheit?'))
+    ">
+    Convert Temperature
+  </button>
+  
+
+
+  <script>
+    function celciusToFahrenheit(celciusVar) {
+      let fahrenheitVar = 0;
+      fahrenheitVar = (celciusVar*9/5) + 32;
+
+      alert(`Fahrenheit Temperature: ${fahrenheitVar} °F`);
+    }
+
+    function fahrenheitToCelsius(fahrenheitVar) {
+      let celciusVar = 0;
+      celciusVar = (fahrenheitVar - 32) *5/9;
+
+      alert(`Celsius Temperature: ${celciusVar} °C`);
+    }
+
+    function convertTemperature(temperatureVar, unit) {
+      if (unit == 'c' || unit == 'C' || unit == 'celsius' || unit == 'Celsius') {
+        let fahrenheitVar = 0;
+        fahrenheitVar = (temperatureVar*9/5) + 32;
+
+        alert(`Fahrenheit Temperature: ${fahrenheitVar} °F`);
+      } else if (unit == 'f' || unit == 'F' || unit == 'fahrenheit' || unit == 'Fahrenheit') {
+        let celciusVar = 0;
+        celciusVar = (temperatureVar - 32) *5/9;
+
+        alert(`Celsius Temperature: ${celciusVar} °C`);
+      }
+    }
+  </script>
+</body>
+</html>

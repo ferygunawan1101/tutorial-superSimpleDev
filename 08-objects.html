@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Javascript</title>
+</head>
+<body>
+  <h1>Object in Javascript</h1>
+
+
+  <script>
+    const product = {
+      name: 'socks',
+      price: 1090
+    }
+
+    console.log(product);
+    console.log(product.name);
+    console.log(product.price);
+
+    product.name = 'cotton socks';
+    console.log(product);
+
+    product.newProperty = true;
+    console.log(product);
+
+    delete product.newProperty;
+    console.log(product);
+
+    console.log(typeof product);
+
+    let product2 = {
+      name: 'shirt'
+    }
+    console.log(product2);
+    console.log(product2.name);
+    console.log(product2['name']);
+
+    product2['delivery-time'] = '2 days';
+    console.log(product2);
+    console.log(product2['delivery-time']);
+
+    product2 = {
+      name: 'shirt',
+      'delivery-time': '3 days',
+      rating: {
+        stars: 4.5,
+        count: 87
+      }
+    }
+    console.log(product2);
+    console.log(product2.rating);
+    console.log(product2.rating.stars);
+
+    const product3 = {
+      name: 'shoes',
+      funct: function buyShoes() {
+        //function inside object example
+        console.log('function buyShoes running');
+      }
+    }
+    console.log(product3);
+    console.log(product3.funct);
+    product3.funct();
+    //function inside object = method
+
+    //another method:
+    //console.log()
+    //Math.random()
+
+    console.log(typeof console);
+    console.log(console);
+    console.log(Math);
+
+    //built-in object:
+    //JSON -JavaScript Object Notation, an-Object/data can be use at universal programs language
+    //localStorage
+
+    console.log(JSON);
+    console.log(localStorage);
+
+    JSON.stringify(product2); //convert object to JSON-object that can be used at universal programs language
+    //JSON-object berbentuk 'string'
+
+    const jsonProduct2 = JSON.stringify(product2);
+    console.log(jsonProduct2);
+    console.log(typeof jsonProduct2); //string -not object anymore
+
+    JSON.parse(jsonProduct2); //convert JSON-string to Object
+    console.log(JSON.parse(jsonProduct2));
+
+    //localStorage -hanya bisa simpan data string
+    localStorage.setItem('message', 'hello');
+
+    localStorage.getItem('message');
+    console.log(localStorage.getItem('message'));
+
+
+
+  </script>
+</body>
+</html>

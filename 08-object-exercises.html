@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Exercises</title>
+</head>
+<body>
+  
+  <script>
+    //8a
+    const basketballProduct = {
+      name: 'basketball',
+      price: 2095
+    }
+    console.log(basketballProduct);
+
+    //8b
+    basketballProduct.price = 2095 + 500;
+    console.log(basketballProduct);
+
+    //8c
+    basketballProduct['delivery-time'] = '3 days';
+    console.log(basketballProduct);
+
+    //8d
+    const ballProduct = {
+      name: 'ball',
+      price: 1010
+    }
+    const toyProduct = {
+      name: 'toy',
+      price: 1020
+    }
+    function comparePrice(product1, product2) {
+      if (product1.price > product2.price) {
+        console.log(`${product2.name} is less expensive.`);
+      } else if (product1.price < product2.price) {
+        console.log(`${product1.name} is less expensive.`);
+      }
+    }
+    comparePrice(toyProduct, ballProduct);
+    comparePrice(ballProduct, toyProduct);
+    comparePrice(basketballProduct, toyProduct);
+    
+  </script>
+</body>
+</html>
